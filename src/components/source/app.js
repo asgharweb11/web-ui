@@ -24,10 +24,11 @@ const App = () => {
                 <Row>
                     <Layout>
                         <Switch>
-                            <Route exact path={`${s.client}/`} component={Home}/>
-                            <Route path={`${s.client}/about`} component={About}/>
-                            <Route path={`${s.client}/dashboard`} component={Dashboard}/>
-                            {/* <Route path={`${s.client}/*`} component={NoMatch} /> */}
+                            hello
+                            <Route exact path="/" component={Home}/>
+                            <Route path="/about" component={About}/>
+                            <Route path={`/dashboard`} component={Dashboard}/>
+                            <Route path={`/*`} component={NoMatch} />
                         </Switch>
                     </Layout>
                 </Row>

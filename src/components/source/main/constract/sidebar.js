@@ -1,5 +1,5 @@
 import React from "react"
-import {Container, Row, Col} from "react-bootstrap"
+import {Link} from "react-router-dom"
 import styled from "styled-components"
 // ----------- Todo , Dispatch
 import {useTodo} from "../../../../context"
@@ -9,7 +9,7 @@ import {Color} from "../../theme/events"
 // ------- Fonts 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faSearch , faUtensils,  faMap , faChartPie , faPlus , faShoppingCart , faGem , faCog} from "@fortawesome/free-solid-svg-icons"
-
+import s from "../../../../store.json"
 
 
 const Sidebar = () => {
@@ -25,15 +25,15 @@ const Sidebar = () => {
                 <li onClick={handleClick}><FontAwesomeIcon icon={faSearch} size="lg" /></li>
             </ul>
             <ul>
-                <li><FontAwesomeIcon icon={faUtensils} size="lg" /></li>
-                <li><FontAwesomeIcon icon={faMap} size="lg" /></li>
-                <li><FontAwesomeIcon icon={faChartPie} size="lg" /></li>
-                <li><FontAwesomeIcon icon={faPlus} size="lg" /></li>
+                <Link to="/"><li><FontAwesomeIcon icon={faUtensils} size="lg" /></li></Link>
+                <Link to="/about"><li><FontAwesomeIcon icon={faMap} size="lg" /></li></Link>
+                <Link to="/dashboard"><li><FontAwesomeIcon icon={faChartPie} size="lg" /></li></Link>
+                <Link to="/contact"><li><FontAwesomeIcon icon={faPlus} size="lg" /></li></Link>
             </ul>
             <ul>
-                <li><FontAwesomeIcon icon={faShoppingCart} size="lg" /></li>
-                <li><FontAwesomeIcon icon={faGem} size="lg" /></li>
-                <li><FontAwesomeIcon icon={faCog} size="lg" /></li>
+                <Link to="/"><li><FontAwesomeIcon icon={faShoppingCart} size="lg" /></li></Link>
+                <Link to="/"><li><FontAwesomeIcon icon={faGem} size="lg" /></li></Link>
+                <Link to="/"><li><FontAwesomeIcon icon={faCog} size="lg" /></li></Link>
             </ul>
         </Div>
     )
@@ -51,7 +51,7 @@ const Div = styled.div`
     }
     ul:first-child{
         flex:1;
-        li{
+        a li{
             color: ${({theme , todo}) => eval("theme."+todo.design.theme+".text."+todo.design.text)};
             &:hover {
                 color : ${({theme , todo}) => eval("theme."+todo.design.theme+".text."+todo.design.color)};
@@ -61,25 +61,25 @@ const Div = styled.div`
     }
     ul:nth-child(2){
         flex:5;
-        li:first-child {
+        a:first-child li {
             background : ${({theme , todo}) => eval("theme."+todo.design.theme+".error")};
             &:hover {
                 background : ${({theme,todo}) => eval("theme."+todo.design.theme+".hover.error")};
             }
         }
-        li:nth-child(2){
+        a:nth-child(2) li{
             background: ${({theme,todo}) => eval("theme."+todo.design.theme+".warning")};
             &:hover {
                 background : ${({theme,todo}) => eval("theme."+todo.design.theme+".hover.warning")};
             }
         }
-        li:nth-child(3){
+        a:nth-child(3) li{
             background: ${({theme,todo}) => eval("theme."+todo.design.theme+".info")};
             &:hover {
                 background : ${({theme,todo}) => eval("theme."+todo.design.theme+".hover.info")};
             }
         }
-        li:last-child{
+        a:last-child li{
             color : ${({theme,todo}) => eval("theme."+todo.design.theme+".text.grey")};
             &:hover {
                 color : ${({theme,todo}) => eval("theme."+todo.design.theme+".hover.grey")};
@@ -88,19 +88,19 @@ const Div = styled.div`
     }
     ul:last-child{
         flex:0;
-        li:first-child{
+        a:first-child li{
             background: ${({theme,todo}) => eval("theme."+todo.design.theme+".primary")};
             &:hover {
                 background : ${({theme,todo}) => eval("theme."+todo.design.theme+".hover.primary")};
             }
         }
-        li:nth-child(2){
+        a:nth-child(2) li{
             background: ${({theme,todo}) => eval("theme."+todo.design.theme+".success")};
             &:hover {
                 background : ${({theme,todo}) => eval("theme."+todo.design.theme+".hover.success")};
             }
         }
-        li:last-child{
+        a:last-child li{
             color : ${({theme,todo}) => eval("theme."+todo.design.theme+".text.grey")};
             &:hover {
                 background : ${({theme,todo}) => eval("theme."+todo.design.theme+".hover.grey")};
