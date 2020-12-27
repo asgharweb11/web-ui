@@ -1,3 +1,4 @@
 {
-    "client" : "http://localhost:3000/web-ui"
+    "client" : "http://localhost:3000/web-ui",
+    "params" : "/web-ui"
 }

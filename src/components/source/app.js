@@ -25,10 +25,10 @@ const App = () => {
                     <Layout>
                         <Switch>
                             hello
-                            <Route exact path="/" component={Home}/>
-                            <Route path="/about" component={About}/>
-                            <Route path={`/dashboard`} component={Dashboard}/>
-                            <Route path={`/*`} component={NoMatch} />
+                            <Route exact path={`${s.params}/`} component={Home}/>
+                            <Route path={`${s.params}/about`} component={About}/>
+                            <Route path={`${s.params}/dashboard`} component={Dashboard}/>
+                            <Route path={`${s.params}/*`} component={NoMatch} />
                         </Switch>
                     </Layout>
                 </Row>

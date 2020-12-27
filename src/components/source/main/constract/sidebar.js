@@ -25,15 +25,15 @@ const Sidebar = () => {
                 <Link><li onClick={handleClick}><FontAwesomeIcon icon={faSearch} size="lg" /></li></Link>
             </ul>
             <ul>
-                <Link to="/"><li><FontAwesomeIcon icon={faUtensils} size="lg" /></li></Link>
-                <Link to="/about"><li><FontAwesomeIcon icon={faMap} size="lg" /></li></Link>
-                <Link to="/dashboard"><li><FontAwesomeIcon icon={faChartPie} size="lg" /></li></Link>
-                <Link to="/contact"><li><FontAwesomeIcon icon={faPlus} size="lg" /></li></Link>
+                <Link to={`${s.params}`}><li><FontAwesomeIcon icon={faUtensils} size="lg" /></li></Link>
+                <Link to={`${s.params}/about`}><li><FontAwesomeIcon icon={faMap} size="lg" /></li></Link>
+                <Link to={`${s.params}/dashboard`}><li><FontAwesomeIcon icon={faChartPie} size="lg" /></li></Link>
+                <Link to={`${s.params}/contact`}><li><FontAwesomeIcon icon={faPlus} size="lg" /></li></Link>
             </ul>
             <ul>
-                <Link to="/"><li><FontAwesomeIcon icon={faShoppingCart} size="lg" /></li></Link>
-                <Link to="/"><li><FontAwesomeIcon icon={faGem} size="lg" /></li></Link>
-                <Link to="/"><li><FontAwesomeIcon icon={faCog} size="lg" /></li></Link>
+                <Link to={`${s.params}`}><li><FontAwesomeIcon icon={faShoppingCart} size="lg" /></li></Link>
+                <Link to={`${s.params}`}><li><FontAwesomeIcon icon={faGem} size="lg" /></li></Link>
+                <Link to={`${s.params}`}><li><FontAwesomeIcon icon={faCog} size="lg" /></li></Link>
             </ul>
         </Div>
     )
