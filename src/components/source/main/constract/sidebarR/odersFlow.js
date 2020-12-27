@@ -3,6 +3,7 @@ import styled from "styled-components"
 import {Button} from "react-bootstrap"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faMapMarked} from "@fortawesome/free-solid-svg-icons"
+import s from "../../../../../store.json"
 
 export default function OdersFlow() {
     const data = [1,2];
@@ -18,13 +19,13 @@ export default function OdersFlow() {
                                     <div className="logo">B</div>
                                     <div className="users">
                                         <div className="user">
-                                            <img src="/files/pic/user/3.png" alt="user" />
+                                            <img src={`${s.client}/files/pic/user/3.png`} alt="user" />
                                         </div>
                                         <div className="user">
-                                            <img src="/files/pic/user/4.png" alt="user" />
+                                            <img src={`${s.client}/files/pic/user/4.png`} alt="user" />
                                         </div>
                                         <div className="user">
-                                            <img src="/files/pic/user/1.png" alt="user" />
+                                            <img src={`${s.client}/files/pic/user/1.png`} alt="user" />
                                         </div>
                                     </div>
                                 </div>

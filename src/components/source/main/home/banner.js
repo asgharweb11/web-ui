@@ -1,18 +1,16 @@
 import React from 'react'
 import styled from "styled-components"
 import {Card, Button} from "react-bootstrap"
-// ------- Context --------
-import {useTodo} from "../../../../context"
-// ---------- images
-import img from "../../../../files/pic/banner/5.jpg"
-import icon from "../../../../files/pic/3.jpg"
+// ---------
+import s from "../../../../store.json"
 
 export default function Banner() {
     // params {theme} For __TEST__ 
+    const local = process.env.LOCAL;
     return (
         <Bheader>
             <Card className="banner">
-                <Card.Img className="photo" src="./files/pic/detail/banner.jpg" alt="banner" />
+                <Card.Img className="photo" src={`${s.client}/files/pic/detail/banner.jpg`} alt="banner" />
                 <Card.ImgOverlay className="overlay">
                     <div className="detail">
                         <Card.Body>

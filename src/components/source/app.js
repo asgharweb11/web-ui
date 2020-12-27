@@ -13,19 +13,21 @@ import About from "./main/about"
 import Dashboard from "./main/dashboard"
 // -------- Theme Styles
 import theme from "./theme/theme"
+// ---------- Store
+import s from "../../store.json"
 
 const App = () => {
-
+    console.log("client : " , s.client)
     return (
         <ThemeProvider theme={theme}>
             <Container fluid>
                 <Row>
                     <Layout>
                         <Switch>
-                            <Route exact path="/" component={Home}/>
-                            <Route path="/about" component={About}/>
-                            <Route path="/dashboard" component={Dashboard}/>
-                            <Route path="*" component={NoMatch} />
+                            <Route exact path={`${s.client}/`} component={Home}/>
+                            <Route path={`${s.client}/about`} component={About}/>
+                            <Route path={`${s.client}/dashboard`} component={Dashboard}/>
+                            {/* <Route path={`${s.client}/*`} component={NoMatch} /> */}
                         </Switch>
                     </Layout>
                 </Row>
