@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component : constract/header.js 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col"
+  >
+    <div
+      className="sc-bdfBwQ hEOWYR header"
+    >
+      <h1>
+        Delivery
+        <span>
+          Center
+        </span>
+      </h1>
+      <button
+        className="btn btn-outline-secondary"
+        disabled={false}
+        type="button"
+      >
+        Secondary
+      </button>
+    </div>
+  </div>
+</div>
+`;
