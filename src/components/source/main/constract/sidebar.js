@@ -22,7 +22,7 @@ const Sidebar = () => {
     return (
         <Div todo={todo}>
             <ul>
-                <li onClick={handleClick}><FontAwesomeIcon icon={faSearch} size="lg" /></li>
+                <Link><li onClick={handleClick}><FontAwesomeIcon icon={faSearch} size="lg" /></li></Link>
             </ul>
             <ul>
                 <Link to="/"><li><FontAwesomeIcon icon={faUtensils} size="lg" /></li></Link>
