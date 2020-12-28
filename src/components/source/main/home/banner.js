@@ -10,7 +10,7 @@ export default function Banner() {
     return (
         <Bheader>
             <Card className="banner">
-                <Card.Img className="photo" src={`${s.client}/files/pic/detail/banner.jpg`} alt="banner" />
+                <Card.Img className="photo" src={`./files/pic/detail/banner.jpg`} alt="banner" />
                 <Card.ImgOverlay className="overlay">
                     <div className="detail">
                         <Card.Body>
