@@ -22,6 +22,9 @@ const Sidebar = styled.div`
     align-items:center;
     flex:1;
     height: 100vh;
+    @media (max-width : ${({theme}) => theme.media.tabletL}){
+        height : auto;
+    }
     .header{
         display : flex;
         justify-content:space-between;

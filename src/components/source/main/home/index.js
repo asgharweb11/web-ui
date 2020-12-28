@@ -1,8 +1,12 @@
 import React from "react"
 import { Button, Row, Col } from "react-bootstrap"
+import styled from "styled-components"
 import {
     useParams
 } from "react-router-dom"
+// -------- Context
+import {useTodo} from "../../../../context"
+import {SIDEBAR_R} from "../../../../context/types"
 // --------Components 
 import Banner from "./banner"
 import Card from "./card"
@@ -11,6 +15,7 @@ import s from "../../../../store.json"
 
 const Home = () => {
 
+    const {todo , dispatch} = useTodo()
     const { id } = useParams();
 
     const data = [
@@ -40,17 +45,27 @@ const Home = () => {
         }
     ]
 
+    const handleMove = () => {
+        const close = "translate(285px , 0px)";
+        dispatch({type : SIDEBAR_R , payload : close})
+    }
+
     return (
-        <Row>
+        <Row onClick={handleMove}>
             <Col xs={12}>
                 <Banner />
             </Col>
-            <Col xs={12}>
+            <StyleCard xs={12}>
                 <Card data={data} />
-            </Col>
+            </StyleCard>
         </Row>
     )
 }
+
+const StyleCard = styled(Col)`
+    width : 100%;
+    overflow-x : auto;
+`; 
 
 
 export default Home;

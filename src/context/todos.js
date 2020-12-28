@@ -8,5 +8,8 @@ export default {
         text5 : "grey5",
         background : "",
         font : "md"
+    },
+    move : {
+        sidebarR : "translate(285px , 0px)"
     }
 }

@@ -1,19 +1,27 @@
-import React from "react"
+import React , {useState} from "react"
 import {Row, Col , Button} from "react-bootstrap"
 import styled from "styled-components"
 // ----------- Todo
 import {useTodo} from "../../../../context"
+import {SIDEBAR_R} from "../../../../context/types"
 
 const Footer = () => {
 
     const {todo , dispatch} = useTodo();
+    // const [move , setMove] = useState(true)
+    const handleSidebarR = () => {
+        const open = "translate(0px , 0px)";
+        // const close = "translate(285px , 0px)";
+        dispatch({type : SIDEBAR_R , payload : open})
+        // setMove(!move)
+    }
 
     return (
             <Row>
                 <Col>
                     <Header  todo={todo} className="header">
                         <h1>Delivery<span>Center</span></h1>
-                        <Button variant="outline-secondary">Secondary</Button>
+                        <Button onClick={handleSidebarR} variant="outline-secondary">Secondary</Button>
                     </Header>
                 </Col>
             </Row>

@@ -21,15 +21,16 @@ export default function footer() {
                     <h5>5685</h5>
                     <Button variant="outline-primary">Today</Button>
                 </div>
-            </div>
-            <div className="icons">
-                <div className="icon">
-                    <FontAwesomeIcon icon={faGlasses} />
+                <div className="icons">
+                    <div className="icon">
+                        <FontAwesomeIcon icon={faGlasses} />
+                    </div>
+                    <div className="icon">
+                        <FontAwesomeIcon icon={faDiceOne} />
+                    </div>
                 </div>
-                <div className="icon">
-                    <FontAwesomeIcon icon={faDiceOne} />
-                </div>
             </div>
+            
         </Footer>
     )
 }
@@ -42,15 +43,15 @@ const Footer = styled.div`
     width : 100%;
     padding : 20px;
     .icons{
-        border : 1px solid #d6d6d6;
-        border-radius:10px;
         display:flex;
         flex-direction:column;
         justify-content: space-between;
         align-items:center;
         flex: 0.2;
         height: 100px;
-        margin: 0px 10px;
+        @media (max-width : ${({theme}) => theme.media.laptopM}){
+            display : none;
+        }
         .icon {
             font-size : 16px;
             display:flex;
@@ -58,7 +59,8 @@ const Footer = styled.div`
             align-items:center;
             height: 100px;
             padding: 10px;
-            color: #444242;
+            color: white;
+
         }
     }
 
@@ -71,6 +73,8 @@ const Footer = styled.div`
         border-radius: 10px;
         padding: 10px;
         background: #ff5050;
+        width : 100%;
+        overflow : hidden;
         .data{
             display : flex;
             justify-content: flex-start;

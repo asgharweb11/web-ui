@@ -41,6 +41,9 @@ const Banner = styled.div`
     display : flex;
     justify-content: space-around;
     margin-top: 50px;
+    @media (max-width : ${({theme}) => theme.media.tablet}){
+        width : 650px;
+    }
     .cardM {
         margin: ${({theme}) => theme.px.p1} ${({theme}) => theme.px.p4};
         .photo {

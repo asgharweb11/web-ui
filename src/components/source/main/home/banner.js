@@ -34,6 +34,9 @@ const Bheader = styled.div`
         width : 100%;
         height : 300px;
         border-radius : ${({theme}) => theme.px.p3};
+        @media (max-width : ${({theme}) => theme.media.tablet}) {
+            height : 240px;
+        }
     }
     .overlay{
         display : flex;
@@ -43,6 +46,13 @@ const Bheader = styled.div`
             background: #00000063;
             flex: 1;
             border-radius : ${({theme}) => theme.px.p4};
+        }
+        .card-body{
+            p {
+                @media (max-width : ${({theme}) => theme.media.tablet}) {
+                    display : none;
+                }
+            }
         }
         .card-footer {
             display : flex;

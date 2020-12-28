@@ -48,11 +48,13 @@ const FStyle = styled.div`
     align-items:center;
     height : 100px;
     margin-top:60px;
+    width : 100%;
     .card-Profile{
         display: flex;
         flex:1;
         justify-content: space-between;
         align-items:center;
+        overflow-x: auto;
         .user{
             padding:10px;
             text-align:center;
@@ -61,6 +63,9 @@ const FStyle = styled.div`
                 height: 40px;
                 margin-bottom: 5px;
                 border-radius:20px;
+                @media (max-width : ${({theme}) => theme.media.tablet}){
+                    height : auto;
+                }
             }
             h3{
                 color: ${({theme , todo}) => eval("theme."+todo.design.theme+".text."+todo.design.text)};
