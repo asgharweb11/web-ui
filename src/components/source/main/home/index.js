@@ -25,7 +25,7 @@ const Home = () => {
             price : "55.35",
             location : "brooklyn",
             date : "4:00",
-            pic : `${s.client}/files/pic/post/1.jpg`
+            pic : `./files/pic/post/1.jpg`
         },
         {
             title : "Frutti di mare",
@@ -33,7 +33,7 @@ const Home = () => {
             price : "45.00",
             location : "manhattan",
             date : "5:10",
-            pic : `${s.client}/files/pic/post/2.jpg`
+            pic : `./files/pic/post/2.jpg`
         },
         {
             title : "Marinara",
@@ -41,7 +41,7 @@ const Home = () => {
             price : "55.35",
             location : "brooklyn",
             date : "6:15",
-            pic : `${s.client}/files/pic/post/3.jpg`
+            pic : `./files/pic/post/3.jpg`
         }
     ]
 

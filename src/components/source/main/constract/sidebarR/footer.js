@@ -10,7 +10,7 @@ export default function footer() {
             <div className="detail">
                 <div className="data">
                     <div className="pizza">
-                        <img src="files/pic/detail/pizza.png" alt="Pettza" />
+                        <img src="./files/pic/detail/pizza.png" alt="Pettza" />
                     </div>
                     <div className="name">
                         <h4>Pastry</h4>

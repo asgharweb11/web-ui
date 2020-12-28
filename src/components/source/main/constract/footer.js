@@ -8,13 +8,13 @@ import {useTodo} from "../../../../context"
 import s from "../../../../store.json"
 
 const users = [
-    {name : "Jessica" , mod : "supplies" , pic : `${s.client}/files/pic/user/1.png`},
-    {name : "Martha" , mod : "Cook" , pic : `${s.client}/files/pic/user/2.png`},
-    {name : "Sofia" , mod : "Driver" , pic : `${s.client}/files/pic/user/3.png`},
-    {name : "jan" , mod : "marjting" , pic : `${s.client}/files/pic/user/4.png`},
-    {name : "Jessica" , mod : "Cook" , pic : `${s.client}/files/pic/user/5.jpg`},
-    {name : "Mark" , mod : "marjting" , pic : `${s.client}/files/pic/user/6.jpg`},
-    {name : "jack" , mod : "Cook" , pic : `${s.client}/files/pic/user/7.jpg`},
+    {name : "Jessica" , mod : "supplies" , pic : `./files/pic/user/1.png`},
+    {name : "Martha" , mod : "Cook" , pic : `./files/pic/user/2.png`},
+    {name : "Sofia" , mod : "Driver" , pic : `./files/pic/user/3.png`},
+    {name : "jan" , mod : "marjting" , pic : `./files/pic/user/4.png`},
+    {name : "Jessica" , mod : "Cook" , pic : `./files/pic/user/5.jpg`},
+    {name : "Mark" , mod : "marjting" , pic : `./files/pic/user/6.jpg`},
+    {name : "jack" , mod : "Cook" , pic : `./files/pic/user/7.jpg`},
 ];
 
 const Footer = () => {
